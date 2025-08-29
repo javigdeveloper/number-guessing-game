@@ -1,0 +1,21 @@
+# Ignore Bundler config files (local installation)
+.bundle/
+
+# Ignore gems installed locally in vendor directory
+/vendor/bundle/
+
+# Ignore log files (if any generated during runtime)
+log/*
+
+# Ignore temporary files and cache (if created)
+tmp/*
+
+# Ignore VS Code settings folder
+.vscode/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore RSpec status file (tracks last test results)
+.rspec_status
