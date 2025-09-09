@@ -24,7 +24,7 @@ difficulty = difficulty_map[choice]
 secret = rand(1..100)
 game = Game.new(secret, difficulty: difficulty)
 
-puts "\nYou have #{game.allowed_guesses} guesses. Good luck!"
+puts "\nYou have #{game.allowed_guesses} guesses on #{difficulty.to_s.capitalize} mode. Good luck!"
 
 loop do
   puts "\nGuesses remaining: #{game.guesses_remaining}"
@@ -53,7 +53,7 @@ loop do
     puts "You've run out of guesses! The number was #{secret}."
     break
   when :correct
-    puts "Correct! You guessed the number!"
+    puts "Correct! You guessed the number in #{game.guess_count} guesses."
     break
   when :low
     puts "Too low. Try a higher number!"
