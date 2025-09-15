@@ -1,3 +1,4 @@
+require 'spec_helper'
 require_relative '../lib/game'
 
 describe Game do
@@ -88,7 +89,7 @@ describe Game do
       5.times { game.check_guess(1) }
       expect(game.guesses_remaining).to eq(0)
       result = game.check_guess(42)
-      expect(result).to eq(:no_guesses_left) # You can choose a different symbol if you prefer
+      expect(result).to eq(:no_guesses_left)
     end
   end
 
