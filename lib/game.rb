@@ -21,8 +21,8 @@ class Game
   
   def check_guess(guess)
     @guess_count += 1
-    return :no_guesses_left if guesses_remaining < 1
     return :correct if guess == @secret_number
+    return :no_guesses_left if guesses_remaining < 1
     return :low if guess < @secret_number
     :high
   end
